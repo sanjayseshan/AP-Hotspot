@@ -131,7 +131,8 @@ if [[ $(iwconfig "$INTERFACE_WLAN" 2>&1 | grep "Tx-Power=off") ]]; then
 	exit 1
 # Check if Wireless is enabled, but connected to a network
 elif [[ ! $(iwconfig "$INTERFACE_WLAN" 2>&1 | grep "ESSID:off/any") && $(iwconfig "$INTERFACE_WLAN" 2>&1 | grep "ESSID:") ]]; then
-	show_err "Please disconnect WiFi before proceeding"
+	ifconfig wlan0 down
+#	show_err "Please disconnect WiFi before proceeding"
 	exit 1
 fi
 }
