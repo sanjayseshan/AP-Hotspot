@@ -1,6 +1,8 @@
 AP-Hotspot
 ==========
 
+Note: Only works on Debian Jessie/Wheezy and derivitives. (eg. Ubuntu 12.04-14.04)
+
 Automatically creates an infrastructure (Access Point mode) wireless hotspot in Ubuntu that should work with Android and Windows Phone devices
 
 Usage
